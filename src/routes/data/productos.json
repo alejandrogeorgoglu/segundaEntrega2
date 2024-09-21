@@ -1,0 +1,30 @@
+[
+  {
+    "pid": "3ec3da24-d7aa-436e-a084-b51eedfd2193",
+    "title": "Kill Bill",
+    "description": "film de Tarantino",
+    "code": "A2345",
+    "price": 120,
+    "status": true,
+    "stock": 23,
+    "category": "acción",
+    "thumbnails": [
+      "www.cnre.com",
+      "www.aledx.com"
+    ]
+  },
+  {
+    "pid": "3a742fd2-21c5-429e-bdf5-1a9ec5777b8d",
+    "title": "ToyStory",
+    "description": "film de Burton",
+    "code": "F5468",
+    "price": 340,
+    "status": true,
+    "stock": 4,
+    "category": "comedia",
+    "thumbnails": [
+      "www.cnrerte.com",
+      "www.aledxsvs.com"
+    ]
+  }
+]
