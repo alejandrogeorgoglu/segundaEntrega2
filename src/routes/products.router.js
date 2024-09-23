@@ -190,7 +190,9 @@ router.delete("/:pid", (req, res) => {
 });
 
 export default (io, productManager) => {
+
   // Ruta para crear un nuevo producto
+
   router.post("/", (req, res) => {
     const product = req.body;
     const newProduct = productManager.addProduct(product);
@@ -199,6 +201,7 @@ export default (io, productManager) => {
   });
 
   // Ruta para eliminar un producto
+  
   router.delete("/:pid", (req, res) => {
     const { pid } = req.params;
     productManager.deleteProduct(pid);

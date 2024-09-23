@@ -1,7 +1,7 @@
 [
   {
-    "pid": "4112f517-d366-4273-b062-c6223a48cd31",
-    "title": "Dia de la Bestia",
+    "pid": "a45480e3-d9f6-484d-9236-951115378d96",
+    "title": "Muertos de Risa",
     "description": "Alex De La Iglesia",
     "code": "54368",
     "price": 1000,
@@ -14,27 +14,8 @@
     ]
   },
   {
-    "title": "Alejandrito",
-    "description": "adcdcs",
-    "code": "43",
-    "price": "1455",
-    "stock": "4",
-    "category": "drama",
-    "pid": "1727098336165"
-  },
-  {
-    "title": "acadcd",
-    "description": "sdsc",
-    "code": "1334",
-    "price": "1334",
-    "status": "true",
-    "stock": "234",
-    "category": "wwcwc",
-    "pid": "1727098533857"
-  },
-  {
-    "pid": "edb78bb3-70d7-4a1f-bd86-2bfd13c3d376",
-    "title": "s sf sf",
+    "pid": "ef011696-484e-4c91-bda3-523408bca263",
+    "title": "El Dia de la Bestia",
     "description": "Alex De La Iglesia",
     "code": "54368",
     "price": 1000,

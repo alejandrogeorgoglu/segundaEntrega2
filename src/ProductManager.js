@@ -1,6 +1,11 @@
+//ACLARACIÓN: ProductManager.js es el componente central que maneja la lógica relacionada con los productos en mi aplicación, 
+//asegurando que las operaciones de CRUD (Crear, Leer, Actualizar, Eliminar) se realicen de manera efectiva y que los datos 
+//se mantengan persistentes en el sistema de archivos.
+
+
 import fs from "fs";
 import path from "path";
-import __dirname from "./utils.js"; // Asumiendo que tienes esto implementado para obtener __dirname
+import __dirname from "./utils.js"; 
 
 export class ProductManager {
   constructor(filePath) {
@@ -19,7 +24,7 @@ export class ProductManager {
 
   addProduct(product) {
     const products = this.getAllProducts();
-    product.pid = Date.now().toString(); // Generar un ID simple
+    product.pid = Date.now().toString(); 
     products.push(product);
     fs.writeFileSync(this.filePath, JSON.stringify(products, null, 2));
     return product;

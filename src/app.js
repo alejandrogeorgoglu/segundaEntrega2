@@ -4,7 +4,7 @@ import { Server as SocketIOServer } from "socket.io"; // Importar socket.io
 import handlebars from "express-handlebars";
 import __dirname from "./utils.js";
 
-//Importamos los routers
+//Importa los routers
 import productsRouter from "./routes/products.router.js";
 import cartsRouter from "./routes/carts.router.js";
 import viewsRouter from "./routes/views.router.js";
@@ -25,12 +25,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// Configuramos todo lo referente a las plantillas
+// Configura todo lo referente a las plantillas
 app.engine("handlebars", handlebars.engine());
 app.set("views", __dirname + "/views");
 app.set("view engine", "handlebars");
 
-// Cargamos la carpeta 'public' como nuestra carpeta de archivos estáticos
+// Carga la carpeta 'public' como la carpeta de archivos estáticos
 app.use(express.static(__dirname + "/public"));
 
 // Configuración de rutas
@@ -42,16 +42,16 @@ app.use("/", viewsRouter(io, productManager)); // Ruta para las vistas
 io.on("connection", (socket) => {
   console.log("Cliente conectado");
 
-  // Enviar la lista actual de productos al cliente
+  // Envia la lista actual de productos al cliente
   socket.emit("updateProducts", productManager.getAllProducts());
 
-  // Crear nuevo producto
+  // Crea nuevo producto
   socket.on("newProduct", (product) => {
     productManager.addProduct(product);
     io.emit("updateProducts", productManager.getAllProducts());
   });
 
-  // Eliminar producto
+  // Elimina producto
   socket.on("deleteProduct", (pid) => {
     productManager.deleteProduct(pid);
     io.emit("updateProducts", productManager.getAllProducts());
