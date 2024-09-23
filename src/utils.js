@@ -1,16 +1,8 @@
-import multer from "multer";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-//Dónde se almacenaran los archivos
-const storage = multer.diskStorage({
-  //Carpeta donde se va a guardar el archivo
-  destination: function (req, file, cb) {
-    cb(null, __dirname + "/public/img");
-  },
-  //Nombre final que contendrá el archivo
-  filename: function (req, file, cb) {
-    const timestamp = Date.now();
-    cb(null, `${timestamp}-${file.originalname}`);
-  },
-});
+export default __dirname;
 
-export const uploader = multer({ storage });
+//Lo usamos para configurar las rutas de las vistas y los archivos estáticos.

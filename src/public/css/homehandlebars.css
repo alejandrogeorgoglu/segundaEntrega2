@@ -1,0 +1,71 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c42222;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Título */
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Lista de productos */
+.product-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-item {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Títulos de los productos */
+.product-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+/* Descripción y detalles */
+.product-description {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
+
+.product-item p {
+  margin: 5px 0;
+}
+
+/* Texto para cuando no hay productos */
+.no-products {
+  text-align: center;
+  font-size: 1.2em;
+  color: #c0392b;
+}

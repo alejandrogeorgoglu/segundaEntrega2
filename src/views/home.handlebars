@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="/css/homehandlebars.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Lista de Productos</h1>
+      {{#if products.length}}
+        <ul class="product-list">
+          {{#each products}}
+            <li class="product-item">
+              <h2 class="product-title">{{this.title}}</h2>
+              <p class="product-description">{{this.description}}</p>
+              <p><strong>Código:</strong> {{this.code}}</p>
+              <p><strong>Precio:</strong> {{this.price}}</p>
+              <p><strong>Status:</strong> {{this.status}}</p>
+              <p><strong>Stock:</strong> {{this.stock}}</p>
+              <p><strong>Categoría:</strong> {{this.category}}</p>
+              <p><strong>Thumbnails:</strong> {{this.thumbnails}}</p>
+            </li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <p class="no-products">No hay productos disponibles.</p>
+      {{/if}}
+    </div>
+  </body>
+</html>

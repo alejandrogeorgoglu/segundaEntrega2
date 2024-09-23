@@ -30,9 +30,13 @@ const router = Router();
 //====================================================================
 
 // Obtener todos los productos
+
+// En lugar de res.json, renderizamos la vista
 router.get("/", (req, res) => {
   const products = readProductsFile();
-  res.json(products);
+
+  // Renderizamos la vista 'home' y pasamos los productos
+  res.render("home", { products });
 });
 
 // Obtener /products/:pid : Devolver un producto con ID especificado

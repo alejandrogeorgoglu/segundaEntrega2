@@ -1,27 +1,69 @@
 [
   {
-    "pid": "3ec3da24-d7aa-436e-a084-b51eedfd2193",
-    "title": "Kill Bill",
-    "description": "film de Tarantino",
-    "code": "A2345",
-    "price": 120,
-    "status": true,
-    "stock": 23,
-    "category": "acción",
-    "thumbnails": [
-      "www.cnre.com",
-      "www.aledx.com"
-    ]
-  },
-  {
-    "pid": "3a742fd2-21c5-429e-bdf5-1a9ec5777b8d",
-    "title": "ToyStory",
+    "pid": "4f18c9f9-6c12-43b4-ab9b-be17dbe92de1",
+    "title": "HardTime",
     "description": "film de Burton",
     "code": "F5468",
     "price": 340,
     "status": true,
     "stock": 4,
     "category": "comedia",
+    "thumbnails": [
+      "www.cnrerte.com",
+      "www.aledxsvs.com"
+    ]
+  },
+  {
+    "pid": "a6feb498-1274-46b6-9771-6b659a52da5d",
+    "title": "FFF",
+    "description": "film de Burton",
+    "code": "F5468",
+    "price": 340,
+    "status": true,
+    "stock": 4,
+    "category": "comedia",
+    "thumbnails": [
+      "www.cnrerte.com",
+      "www.aledxsvs.com"
+    ]
+  },
+  {
+    "pid": "4112f517-d366-4273-b062-c6223a48cd31",
+    "title": "Dia de la Bestia",
+    "description": "Alex De La Iglesia",
+    "code": "54368",
+    "price": 1000,
+    "status": true,
+    "stock": 2,
+    "category": "drama",
+    "thumbnails": [
+      "www.cnrerte.com",
+      "www.aledxsvs.com"
+    ]
+  },
+  {
+    "pid": "acf5104b-4903-4034-a142-6affda120238",
+    "title": "Muertos de Risa",
+    "description": "Alex De La Iglesia",
+    "code": "54368",
+    "price": 1000,
+    "status": true,
+    "stock": 2,
+    "category": "drama",
+    "thumbnails": [
+      "www.cnrerte.com",
+      "www.aledxsvs.com"
+    ]
+  },
+  {
+    "pid": "e5031ebf-adef-41ea-a377-4aea03347f5c",
+    "title": "AAA",
+    "description": "Alex De La Iglesia",
+    "code": "54368",
+    "price": 1000,
+    "status": true,
+    "stock": 2,
+    "category": "drama",
     "thumbnails": [
       "www.cnrerte.com",
       "www.aledxsvs.com"

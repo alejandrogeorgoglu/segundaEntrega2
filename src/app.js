@@ -1,8 +1,11 @@
 import express from "express";
+import handlebars from "express-handlebars";
+import __dirname from "./utils.js";
 
 //Importamos los routers
 import productsRouter from "./routes/products.router.js";
 import cartsRouter from "./routes/carts.router.js";
+import viewsRouter from "./routes/views.router.js";
 
 const app = express();
 
@@ -10,6 +13,20 @@ const app = express();
 app.listen(8080, () => {
   console.log("El servido se encuentra escuchando");
 });
+//==================================================
+
+// ME QUEDE EN COPIAR LO REFERENTE A LAS PLANTILLAS- CARGA LAS PLANTILLAS, HAY QUE CAMBIAR EL NOMBRE DE LAS PLANTILLAS COMO PIDE EL TP y SEGUIR.....
+
+//==================================================
+
+//Configuramos todo lo referente a las plantillas
+app.engine("handlebars", handlebars.engine());
+app.set("views", __dirname + "/views");
+app.set("view engine", "handlebars");
+// Cargamos la carpeta 'public' como nuestra carpeta de archivos estáticos
+app.use(express.static(__dirname + "/public"));
+//Usamos el enrutador para las vistas
+app.use("/", viewsRouter);
 
 // Middleware para analizar el cuerpo de las solicitudes
 app.use(express.json());
