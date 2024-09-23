@@ -13,11 +13,6 @@ const app = express();
 app.listen(8080, () => {
   console.log("El servido se encuentra escuchando");
 });
-//==================================================
-
-// ME QUEDE EN COPIAR LO REFERENTE A LAS PLANTILLAS- CARGA LAS PLANTILLAS, HAY QUE CAMBIAR EL NOMBRE DE LAS PLANTILLAS COMO PIDE EL TP y SEGUIR.....
-
-//==================================================
 
 //Configuramos todo lo referente a las plantillas
 app.engine("handlebars", handlebars.engine());
