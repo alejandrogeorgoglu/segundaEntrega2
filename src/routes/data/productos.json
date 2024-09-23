@@ -1,33 +1,5 @@
 [
   {
-    "pid": "4f18c9f9-6c12-43b4-ab9b-be17dbe92de1",
-    "title": "HardTime",
-    "description": "film de Burton",
-    "code": "F5468",
-    "price": 340,
-    "status": true,
-    "stock": 4,
-    "category": "comedia",
-    "thumbnails": [
-      "www.cnrerte.com",
-      "www.aledxsvs.com"
-    ]
-  },
-  {
-    "pid": "a6feb498-1274-46b6-9771-6b659a52da5d",
-    "title": "FFF",
-    "description": "film de Burton",
-    "code": "F5468",
-    "price": 340,
-    "status": true,
-    "stock": 4,
-    "category": "comedia",
-    "thumbnails": [
-      "www.cnrerte.com",
-      "www.aledxsvs.com"
-    ]
-  },
-  {
     "pid": "4112f517-d366-4273-b062-c6223a48cd31",
     "title": "Dia de la Bestia",
     "description": "Alex De La Iglesia",
@@ -42,22 +14,27 @@
     ]
   },
   {
-    "pid": "acf5104b-4903-4034-a142-6affda120238",
-    "title": "Muertos de Risa",
-    "description": "Alex De La Iglesia",
-    "code": "54368",
-    "price": 1000,
-    "status": true,
-    "stock": 2,
+    "title": "Alejandrito",
+    "description": "adcdcs",
+    "code": "43",
+    "price": "1455",
+    "stock": "4",
     "category": "drama",
-    "thumbnails": [
-      "www.cnrerte.com",
-      "www.aledxsvs.com"
-    ]
+    "pid": "1727098336165"
   },
   {
-    "pid": "0cb349f1-6725-4751-a317-6756c578440b",
-    "title": "El fantasma",
+    "title": "acadcd",
+    "description": "sdsc",
+    "code": "1334",
+    "price": "1334",
+    "status": "true",
+    "stock": "234",
+    "category": "wwcwc",
+    "pid": "1727098533857"
+  },
+  {
+    "pid": "edb78bb3-70d7-4a1f-bd86-2bfd13c3d376",
+    "title": "s sf sf",
     "description": "Alex De La Iglesia",
     "code": "54368",
     "price": 1000,

@@ -1,0 +1,81 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/homehandlebars.css" />
+    <title>Real Time Products</title>
+  </head>
+  <body>
+    <div>
+      <h1>Lista de Productos</h1>
+
+      <ul id="productList">
+        {{#each products}}
+          <li>
+            <h2>{{this.title}}</h2>
+            <p>{{this.description}}</p>
+            <p>Código: {{this.code}}</p>
+            <p>Precio: ${{this.price}}</p>
+            <p>Status: {{this.status}}</p>
+            <p>Stock: {{this.stock}}</p>
+            <p>Categoría: {{this.category}}</p>
+            <p>Thumbnails: {{this.thumbnails}}</p>
+            <button class="deleteBtn" data-id="{{this.pid}}">Eliminar</button>
+          </li>
+        {{/each}}
+      </ul>
+
+      <h2>Agregar Producto</h2>
+      <form id="productForm">
+        <input type="text" name="title" placeholder="Título" required />
+        <input
+          type="text"
+          name="description"
+          placeholder="Descripción"
+          required
+        />
+        <input type="text" name="code" placeholder="Código" required />
+        <input type="number" name="price" placeholder="Precio" required />
+        <input type="boolean" name="status" placeholder="Status" required />
+        <input type="number" name="stock" placeholder="Stock" required />
+        <input type="text" name="category" placeholder="Categoría" required />
+        <button type="submit">Agregar Producto</button>
+      </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    
+      const socket = io(); 
+       
+    socket.on('updateProducts', (products) => {
+    const productList = document.getElementById('productList');
+    productList.innerHTML = ''; // Limpiar la lista antes de actualizar
+
+    products.forEach(product => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <h2>${product.title}</h2>
+            <p>${product.description}</p>
+            <p>Código: ${product.code}</p>
+            <p>Precio: $${product.price}</p>
+            <p>Status: ${product.status}</p>
+            <p>Stock: ${product.stock}</p>
+            <p>Categoría: ${product.category}</p>
+            <p>Thumbnails: ${product.thumbnails}</p>
+            <button class="deleteBtn" data-id="${product.pid}">Eliminar</button>
+        `;
+        productList.appendChild(li);
+    });
+
+    //Evento para los botones de eliminar
+    document.querySelectorAll('.deleteBtn').forEach(button => {
+        button.addEventListener('click', () => {
+            const pid = button.getAttribute('data-id');
+            socket.emit('deleteProduct', pid);
+        });
+    });
+});
+    </script>
+  </body>
+</html>

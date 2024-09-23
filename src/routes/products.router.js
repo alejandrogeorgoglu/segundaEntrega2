@@ -189,4 +189,22 @@ router.delete("/:pid", (req, res) => {
   res.status(204).json({ message: "Producto eliminado" });
 });
 
-export default router;
+export default (io, productManager) => {
+  // Ruta para crear un nuevo producto
+  router.post("/", (req, res) => {
+    const product = req.body;
+    const newProduct = productManager.addProduct(product);
+    io.emit("updateProducts", productManager.getAllProducts());
+    res.status(201).json({ message: "Producto creado", product: newProduct });
+  });
+
+  // Ruta para eliminar un producto
+  router.delete("/:pid", (req, res) => {
+    const { pid } = req.params;
+    productManager.deleteProduct(pid);
+    io.emit("updateProducts", productManager.getAllProducts());
+    res.status(204).json({ message: "Producto eliminado" });
+  });
+
+  return router;
+};
